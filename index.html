@@ -1,53 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt/br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <script src="https://kit.fontawesome.com/b656f83f41.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&display=swap" rel="stylesheet">    <title> Minha Agenda</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Formulário EBAC</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <i class="fa-solid fa-book"></i>
-            <h1>Agenda de Contatos</h1>
-        </header>
-       
-        <div class="btn-acoes">
-            <button id="exibirForm"> Adicionar Contato</button>
+        <div class="container">
+            <button id="botao-exibir"> Exibir formulário</button>
 
-        </div>
-    <form id="adicionar-contato">
-        <label for="nome-atividade"> Nome:</label>
-        <input type="text" id="add-nome" placeholder="Nome de contato" required>
+            <form style="display: none;">
+            <h2>Cadastro</h2>
+            <div class="form-campo">
+                <label for="name"> Nome Completo:</label>
+                <input type="text" name="name"> 
+            </div>
 
-        <label for="add-telefone"> Tel:</label>
+            <div class="form-campo">
+                <label for="email"> E-mail</label>
+                <input type="email" name="email"> 
+            </div>
 
-        <input type="number" id="add-telefone" placeholder="Número do contato" required>
-        <button type="submit"> Salvar Contato</button>
-    </form>
+            <div class="form-campo">
+                <label for="telefone"> Telefone:</label>
+                <input type="text" name="telefone" id="telefone"> 
+            </div>
 
-    <table class="tabela-contatos" cellspacing="0">
-        <thead> 
-            <tr>
-                <th> Nome </th>
-                <th> Telefone </th>
-            </tr>
-            
-        </thead>
-        <tbody>
+            <div class="form-campo">
+                <label for="cpf"> CPF:</label>
+                <input type="text" name="cpf" id="CPF"> 
+            </div>
 
-        </tbody>
+            <div class="form-campo">
+                <label for="endereco"> Endereço:</label>
+                <input type="text" name="endereco"> 
+            </div>
 
-</table>
-
-</div>
-<script src="./index.js"></script>
+            <div class="form-campo">
+                <label for="CEP"> CEP:</label>
+                <input type="text" name="CEP" id="CEP"> 
+            </div>
+            <button type="submit"> ENVIAR FORMULÁRIO </button>
+        </form>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./JS/jquery.mask.min.js"> </script>
+    <script src="./JS/jquery.validate.min.js"></script>
+    <script src="./JS/messages_pt_BR.min.js"></script>
+    <script src="./JS/main.js"></script>
 </body>
 </html>
