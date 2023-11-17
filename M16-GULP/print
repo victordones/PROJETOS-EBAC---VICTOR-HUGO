@@ -1,0 +1,14 @@
+function comprimeJS(){
+    return gulp.src('./source/scripts/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./build/scripts'))
+}
+exports.javascript = comprimeJS
+
+
+const imagemin = require('gulp-imagemin');
+function comprimeImagens() {
+    return gulp.src('./source/images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./build/images'))
+}
